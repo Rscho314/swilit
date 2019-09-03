@@ -1,3 +1,5 @@
+%this file contains all general utilties that do not fit elsewhere
+
 :- module(util, [delayed_maplist/4]).
 
 delayed_maplist(_, _, [], []):-!.
