@@ -13,30 +13,27 @@
  * through JSON serialization, but pengines is an alternative).
  */
 
-:- module(swilit, []).
+:- module(swilit, [query_list/2]).
 
-
-
-
-
-/*
 :- use_module(query).
+:- use_module(util).
 
 % example of getting record count as a number
-query_main(Y):-
+query(Query, Count):-
     query_entrez('esearch',
                  pubmed,
-                 "atherosclerosis AND stent",
+                 Query,
                  0,
                  20,
                  count,
                  1900,
                  2019,
-                 X),
-    number_string(Y, X.esearchresult.count).
-*/
+                 Response),
+    number_string(Count, Response.esearchresult.count).
 
 
+query_list(TermList, Counts):-
+    delayed_maplist(0.334, swilit:query, TermList, Counts).
 
 
 
