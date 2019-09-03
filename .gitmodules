@@ -1,0 +1,3 @@
+[submodule "pengines-master"]
+	path = pengines-master
+	url = https://github.com/SWI-Prolog/pengines.git

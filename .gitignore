@@ -1,1 +1,10 @@
-*.*~
+*
+
+!.gitmodules
+!merge-pengines.sh
+!run_swilit.pl
+!test.pl
+
+!/*
+
+!/apps/swilit/*
