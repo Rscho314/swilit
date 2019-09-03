@@ -5,6 +5,6 @@
 !run_swilit.pl
 !test.pl
 
-!/*
+/*
 
 !/apps/swilit/*
