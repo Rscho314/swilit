@@ -14,23 +14,20 @@ rm .gitignore
 mv .gitignore-copy .gitignore
 
 #remove inappropriate git tracking
-git rm --cached run.pl
+git rm -f run.pl
 git rm --cached daemon.pl
 git rm --cached debug.pl
-git rm --cached load.pl
+git rm -f load.pl
 git rm --cached server.pl
 git rm --cached storage.pl
-git rm -r --cached ./apps/genealogist
-git rm -r --cached ./apps/scratchpad
-git rm -r --cached ./apps/swish
+git rm -r -f ./apps/genealogist
+git rm -r -f ./apps/scratchpad
+git rm -r -f ./apps/swish
 git rm -r --cached ./lib
 git rm -r --cached ./systemd
 git rm -r --cached ./upstart
 git rm -r --cached ./www
-
-#remove unneeded stuff
-rm run.pl
-rm load.pl
-rm -rf ./apps/genealogist
-rm -rf ./apps/scratchpad
-rm -rf ./apps/swish
+git rm -f .gitmodules
+git rm -f LICENSE
+git rm -f README.md
+git rm -f TODO.md
